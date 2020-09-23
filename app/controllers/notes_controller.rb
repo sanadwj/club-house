@@ -5,6 +5,7 @@ class NotesController < ApplicationController
   # GET /notes.json
   def index
     @notes = Note.all
+    @note = Note.new
   end
 
   # GET /notes/1
@@ -14,7 +15,7 @@ class NotesController < ApplicationController
 
   # GET /notes/new
   def new
-    @note = Note.new
+    @note = current_user.notes.build
   end
 
   # GET /notes/1/edit

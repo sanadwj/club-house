@@ -1,22 +1,9 @@
-<%= form_with(model: note, local: true) do |form| %>
-  <% if note.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(note.errors.count, "error") %> prohibited this note from being saved:</h2>
-
-      <ul>
-      <% note.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
+<%= simple_form_for(@note) do |f|  %>
+<%= f.error_notification %>
+<div class="field">
+  <div class="control">
+    <%= f.input :body, label: "What is the Post?", input_html: { class: 'textarea' }, wrapper: false, label_html: { class: 'label' }, autofocus: true, placeholder: 'Composing a new Post...' %>
   </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+</div>
+<%= f.button :submit, class: 'button is-dark' %>
 <% end %>

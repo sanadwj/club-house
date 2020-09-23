@@ -1,27 +1,12 @@
-<p id="notice"><%= notice %></p>
+<section class="section">
+  <div class="container">
+    <div class="columns">
 
-<h1>Notes</h1>
+        <%= render 'feed' %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Body</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @notes.each do |note| %>
-      <tr>
-        <td><%= note.body %></td>
-        <td><%= link_to 'Show', note %></td>
-        <td><%= link_to 'Edit', edit_note_path(note) %></td>
-        <td><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
 
-<%= link_to 'New Note', new_note_path %>
+    </div>
+  </div>
+</section>

@@ -1,5 +1,6 @@
 class NotesController < ApplicationController
   before_action :set_note, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   # GET /notes
   # GET /notes.json
@@ -25,7 +26,7 @@ class NotesController < ApplicationController
   # POST /notes
   # POST /notes.json
   def create
-    @note = Note.new(note_params)
+    @note = current_user.notes.build(note_params)
 
     respond_to do |format|
       if @note.save

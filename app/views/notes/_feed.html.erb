@@ -17,15 +17,12 @@
             <% if user_signed_in? %>
             <strong><%= note.user.name %></strong><br />
             <small><%= note.user.username %></small><br/>
-              <% end %>>
-            <p><%= note.note %></p>
+              <% end %>
+            <p><%= note.body %></p>
           </div>
           <% if user_signed_in? && current_user.id == note.user_id %>
             <nav class="level">
               <div class="level-left is-mobile">
-                <%= link_to note, class: "level-item" do %>
-                  <span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span>
-                <% end %>
                 <%= link_to edit_note_path(note), class: "level-item" do %>
                   <span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
                 <% end %>

@@ -6,6 +6,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -23,6 +24,9 @@
   <nav class='navbar is-dark'>
       <div class='navbar-brand'>
         <%= link_to root_path, class: 'navbar-item' do %>
+        <span class="icon">
+          <i class="fa fa-home"></i>
+        </span>
           <h1 class='title is-5'>ClubHouse VIP</h1>
         <% end %>
         <div class='navbar-burger burger' data-target='navbarExample'>

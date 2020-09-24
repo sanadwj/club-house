@@ -2,6 +2,11 @@
 
 > In this project,we be built an exclusive clubhouse where members can write embarrassing posts about non-members. Inside the clubhouse, members can see who the author of a post is but, outside, they can only see the story and wonder who wrote it.
 
+## Demo
+
+![gif of the project](app/assets/images/project.gif)
+
+
 ### Usage
 
 > This project intends to practice our skills working with Devise.
@@ -14,9 +19,18 @@
 ### Setup
  - Open a terminal
  - Copy this code : 
+ 
         ```
         git clone git@github.com:sanadwj/club-house.git
+
+        bundle install
+       
+        rails db:migrate
+
+        access http://localhost:3000
         ```
+
+
 
 
 ## Author
